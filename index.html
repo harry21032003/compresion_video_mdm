@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamentos de Compresión de Vídeo Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Fundamentos de Compresión de Vídeo Digital</h1>
+    <p>Jean Cristian Navarro Orozco – Harold Andrés Fajardo Ciro</p>
+    <p>Asignatura: Procesamiento de Señales y Multimedia | Universidad Privada</p>
+  </header>
+
+  <section>
+    <h2>📘 Introducción</h2>
+    <p>Este recurso multimedia interactivo está diseñado para estudiantes de octavo semestre del programa de Ingeniería Multimedia, quienes enfrentan el reto de optimizar la compresión de sus proyectos de vídeo sin sacrificar calidad. Se utilizará en un contexto bimodal: tanto en sesiones presenciales como en entornos virtuales, y busca brindar una experiencia de aprendizaje activa y colaborativa.</p>
+
+    <iframe src="https://www.youtube.com/watch?v=5s9-6mMnpls&t=1s" title="Introducción a la compresión de vídeo" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>🧠 Conceptos Clave</h2>
+    <p>En esta sección podrás explorar los conceptos fundamentales de la compresión de vídeo digital. Al pasar el cursor sobre cada etapa, verás una breve descripción.</p>
+
+    <div class="infografia">
+      <div class="etapa">
+        <button onclick="mostrar('muestreo')">📌 Muestreo</button>
+        <div id="muestreo" class="detalle">
+          <p>El muestreo convierte señales analógicas en digitales. Es el primer paso en cualquier proceso de compresión.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <button onclick="mostrar('dct')">📌 Transformada (DCT)</button>
+        <div id="dct" class="detalle">
+          <p>La DCT convierte la señal del dominio del tiempo al de la frecuencia para una mejor compresión espacial.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <button onclick="mostrar('cuantizacion')">📌 Cuantización</button>
+        <div id="cuantizacion" class="detalle">
+          <p>Reduce precisión de los coeficientes menos importantes, lo que genera pérdida controlada.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <button onclick="mostrar('codificacion')">📌 Codificación</button>
+        <div id="codificacion" class="detalle">
+          <p>Los datos se codifican usando métodos como Huffman o CABAC, para reducir el tamaño del archivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🛠️ Simulador Básico</h2>
+    <p>Experimenta ajustando parámetros clave de compresión. Este simulador es una representación visual y educativa para entender cómo afectan las decisiones de codificación.</p>
+
+    <label for="bitrate">Bitrate (kbps):</label>
+    <input type="range" id="bitrate" min="500" max="8000" step="500" value="4000">
+    <span id="bitrateValue">4000 kbps</span><br><br>
+
+    <label for="perfil">Perfil del códec:</label>
+    <select id="perfil">
+      <option value="baseline">Baseline</option>
+      <option value="main">Main</option>
+      <option value="high">High</option>
+    </select><br><br>
+
+    <label for="gop">Tamaño de GOP:</label>
+    <input type="number" id="gop" value="12"><br><br>
+
+    <div id="resultadoSimulador" class="simulador">
+      <p><strong>Resultado estimado:</strong> Calidad media-alta, adecuada para streaming en Full HD. Pérdida leve en escenas con mucho movimiento.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📝 Evaluación</h2>
+    <p>Realiza este quiz interactivo para reforzar los conceptos fundamentales.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexzcbYluvAGaOXPB7S2hjJW8HtLM8-DCo0DL-dCq27SG-0wg/viewform?usp=header" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  </section>
+
+  <section>
+    <h2>📂 Material de Apoyo</h2>
+    <ul>
+      <li><a href="docs/guia-ffmpeg.pdf" target="_blank">📘 Guía PDF: Comandos de compresión con FFmpeg</a></li>
+      <li><a href="https://www.codecademy.com/articles/video-codecs" target="_blank">🌐 Artículo sobre códecs de vídeo (Codecademy)</a></li>
+      <li><a href="https://ffmpeg.org/ffmpeg-codecs.html" target="_blank">📄 Documentación de códecs en FFmpeg</a></li>
+      <li><a href="https://www.videolan.org/" target="_blank">🔗 Sitio oficial de VLC y herramientas de compresión</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Proyecto Educativo MDM | Jean y Harold</p>
+  </footer>
+</body>
+</html>
